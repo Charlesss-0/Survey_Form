@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+	<h1 id="title">The Gadget House Survey</h1>
+	<p id="description">Your response will be submitted in order for us to improve our service!
+	</p>
+	</header>
+	<div class="container">
+	<form id="survey-form">
+	<fieldset>
+		<label id="name-label" for="name">
+			Name
+			<input 
+			type="text" 
+			name="name" 
+			id="name" 
+			placeholder="Enter your Name" 
+			required />
+		</label>
+		<label id="email-label" for="email">
+			Email
+			<input 
+			type="email" 
+			name="email" 
+			id="email" 
+			placeholder="Enter your Email" 
+			required />
+		</label>
+		<label id="phone-label" for="phone">
+			Phone Number
+			<input 
+			type="tel" 
+			name="phone-number" 
+			id="phone" 
+			minlength="8"
+			maxlength="15"
+			placeholder="Enter your Phone Number" 
+			required 
+			/>
+		</label>
+		<label id="number-label" for="number">
+			Age<span> (optional)</span>
+			<input 
+			type="number" 
+			name="age" 
+			id="number" 
+			min="10" 
+			max="100"  
+			placeholder="Enter your age" 
+			required />
+		</label>
+	</fieldset>
+
+	<fieldset>
+		<p>Would you recommend our products?</p>
+		<label>
+			<input 
+			type="radio" 
+			name="recommend" 
+			value="absolutely" 
+			class="input-radio" 
+			checked />
+			Absolutely
+		</label>
+		<label>
+			<input 
+			type="radio" 
+			name="recommend" 
+			value="maybe" 
+			class="input-radio" />
+			Maybe
+		</label>
+		<label>
+			<input 
+			type="radio" 
+			name="recommend" 
+			value="not-really" 
+			class="input-radio" />
+			Not really
+		</label>
+	</fieldset>
+
+	<fieldset>
+		<p>How did you hear about us?</p>
+		<select id="dropdown" name="method" required >
+			<option disabled selected value>Select an option</option>
+			<option value="websites" >Websites</option>
+			<option value="instagram" >Instagram</option>
+			<option value="facebook" >Facebook</option>
+			<option value="youtube" >YouTube</option>
+			<option value="friends" >Friends</option>
+			<option value="other">Other</option>
+		</select>
+	</fieldset>
+
+	<fieldset>
+		<p>What other accesories would like us to sell?
+			<span>(check all that apply)</span>
+		</p>
+		<label>
+			<input type="checkbox" name="costumer-prefer" value="cooling-systems" /> Cooling Systems
+		</label>
+		<label>
+			<input type="checkbox" name="costumer-prefer" value="cases" /> Cases
+		</label>
+		<label>
+			<input type="checkbox" name="costumer-prefer" value="power-supplies" /> Power Supplies
+		</label>
+		<label>
+			<input type="checkbox" name="costumer-prefer" value="solid-state-drives" /> Solid-State Drives
+		</label>
+		<label>
+			<input type="checkbox" name="costumer-prefer" value="motherboards" /> Motherboards
+		</label>
+		<label>
+			<input type="checkbox" name="costumer-prefer" value="other" /> Other
+		</label>
+	</fieldset>
+
+	<fieldset>
+		<p>Let us know any additional comments that you may have</p>
+		<textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+	</fieldset>
+
+	<fieldset>
+		<label for="submit">
+		<button type="submit" id="submit" class="button">
+			Submit
+		</button>
+		</label>
+	</fieldset>
+	</form>
+	</div>
+</body>
+</html>
